@@ -1,0 +1,23 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+
+# Pytest / coverage
+.pytest_cache/
+.coverage
+
+# Logs
+logs/
+
+# Secrets (Chứa thông tin bảo mật, mật khẩu đã tìm thấy)
+secrets/
+*.env
+!.env.example
+
+# Data files (Chứa các tệp dữ liệu phân tích nhị phân và Excel lớn)
+data/
+*.xls
+*.xlsx
+
+# Review reports output
+output/
