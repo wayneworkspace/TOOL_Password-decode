@@ -7,7 +7,7 @@ A high-performance, multi-core CLI tool to recover passwords and decrypt passwor
 
 ## 1. Business Context & Goals
 
-* **Business problem:** Legacy Microsoft Excel 97-2003 workbooks (`.xls`) containing critical business formulas and proprietary formulations (such as `ABMV -  Wet BI formulation.xls`) can be locked with lost or forgotten passwords. Traditional brute-force tools either corrupt workbook streams or decrypt the entire file per attempt (which drops throughput to <200 pwd/s).
+* **Business problem:** Legacy Microsoft Excel 97-2003 workbooks (`.xls`) containing critical business formulas and proprietary formulations (such as `Wet BI formulation.xls`) can be locked with lost or forgotten passwords. Traditional brute-force tools either corrupt workbook streams or decrypt the entire file per attempt (which drops throughput to <200 pwd/s).
 * **Project goal:** Extract FilePass encryption parameters (salt and verifier) directly from the OLE stream, verify candidate passwords at 50,000+ pwd/s per core across all available CPU threads using `msoffcrypto`, and automatically decrypt the workbook to clean `.xls` once found.
 
 ## 2. Pipeline Architecture
