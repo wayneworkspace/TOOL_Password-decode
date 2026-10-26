@@ -1,6 +1,5 @@
-# Excel Password Extractor
+# Excel Password Decoder
 
-[![CI](https://github.com/wayneworkspace/Password_extract/actions/workflows/ci_test.yml/badge.svg)](https://github.com/wayneworkspace/Password_extract/actions/workflows/ci_test.yml)
 ![Python](https://img.shields.io/badge/python-3.13-blue)
 ![Security](https://img.shields.io/badge/security-msoffcrypto-success)
 
@@ -52,7 +51,7 @@ A high-performance, multi-core CLI tool to recover passwords and decrypt passwor
 ## 4. Results Achieved
 
 * **Recovery throughput:** Achieved ~51,500 verifications per second per CPU core (~800,000 pwd/s aggregate across 16 CPU cores), compared to standard full-file decryption throughput of ~172 pwd/s (a >4,500x speedup).
-* **Target solved:** Successfully cracked and recovered the password (`12345`) for `ABMV -  Wet BI formulation.xls` from an exhaustive 26-million combination search space in ~32 seconds.
+* **Target solved:** Successfully cracked and recovered the password (`12345`) for `Wet BI formulation.xls` from an exhaustive 26-million combination search space in ~32 seconds.
 * **Storage & Lean:** Purged 614 MB of raw candidate dumps down to a lean, modular 3-file architecture under `src/` (<220 lines total across entire codebase).
 * **Test coverage:** 100% pass rate across 6 automated unit tests in `0.30s`.
 
@@ -81,19 +80,6 @@ copy .env.example .env
 # 4. Place target file in data/ and run password extraction
 python main.py
 ```
-
-## Code Quality & CI/CD
-
-Before opening a Pull Request, make sure all of these checks pass:
-
-```powershell
-uv run ruff check .
-uv run ruff format --check .
-uv run pytest
-```
-
-* **CI pipeline (`ci_test.yml`):** Runs ruff linter, code format validation, and pytest unit test suite automatically on GitHub Actions.
-* **CD pipeline (`cd_deploy.yml`):** Automatically packages release builds and updates documentation on merge to `main`.
 
 ## Project Structure
 
